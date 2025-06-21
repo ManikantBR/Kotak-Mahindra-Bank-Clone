@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+  box-sizing: border-box;
+} 
+body
+{
+  color: #f8f9fa;
+}
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Top Nav */
+.navigation1 {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  height: 50px;
+  width: 100%;
+}
+
+.megamenu1 {
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.listitem1 {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.listitem1 li{
+  font-weight: bolder;
+}
+
+.login {
+  background-color: #002c5f;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.list1 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.fa-search {
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-btn {
+  padding: 6px 25px;
+  border-radius: 20px;
+  border: none;
+  background-color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav-link {
+  color: white !important;
+  font-weight: 800;
+  padding: 0 10px;
+}
+
+.listitem1 .nav-link:hover {
+  border-top: 2px solid white;
+  border-radius: 50px;
+}
+
+/* Second Navigation */
+.naviagtion2 {
+  background-color: #fff; 
+}
+
+.nav2wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.nav2ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0;
+  margin: 0;
+}
+
+.nav2li {
+  list-style: none;
+}
+
+.nav2a {
+  color: rgb(97, 95, 95) !important;
+  font-weight: 500 !important;
+  padding: 6px 0px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.nav2a:hover {
+  color: rgb(6, 6, 6) !important;
+}
+
+.nav2a button {
+  border-radius: 60px;
+  border: 0;
+  padding: 10px 15px;
+  background-color: rgb(221, 221, 224);
+  color: rgb(0, 102, 255);
+  font-weight: bolder;
+}
+
+
+/* slider css */
+.carousel-item {
+  height: 100vh;
+  position: relative;
+}
+ 
+/* Caption container */.carousel-item {
+  height: 100vh;
+  position: relative;
+}
+
+ 
+
+/* Caption block styling */
+.custom-caption {
+  position: absolute;
+  top: 20%;            /* from top */
+  left: 20%;           /* from left edge */
+  transform: translateX(0);
+  max-width: 600px;
+  text-align: left;    /* entire block left aligned */
+  color: white;
+}
+
+/* Heading style */ 
+.carousel-item img {
+  height: 80%; 
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.sliderh2 {
+  color: red;
+  font-weight: 800;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  text-align: left;    /* each line starts from the left */
+}
+
+/* Paragraph under heading (optional) */
+.custom-caption p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: justify; /* you can change to left if needed */
+}
+
+/* Button style */
+.sliderb {
+  border-radius: 5px;
+  background-color: red;
+  border: 0;
+  padding: 10px 25px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: -400px;
+}
+.sliderb1{
+  
+    border-radius: 5px;
+    background-color: red;
+    border: 0;
+    padding: 10px 25px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 150px;
+    margin-left: -400px;
+  
+}
+
+
+/* grid items  */
+/* Apply red color and spacing to "Apply Now" button */
+.btn-apply {
+  color: red;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+.btn-apply i {
+  margin-left: 5px;
+  font-size: 0.9rem;
+}
+
+/* Optional hover effect */
+.btn-apply:hover {
+  text-decoration: underline;
+}
+.cards-section {
+  background-color: #f8f9fa; /* Light grey like Kotak */
+  width: 100%;
+}
+.col-md-4 {
+  transition: transform 0.3s ease; /* Smooth scaling over 0.3 seconds */
+}
+
+.col-md-4:hover {
+  cursor: pointer;
+  transform: scale(1.02); /* Use transform instead of scale alone */
+}
+
+
+
+/* 2grid video  */
+
+
+.kotak-container {
+  display: flex;
+  max-width: 1100px;
+  margin: 40px auto;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  border: 1px solid #e2e2e2;
+}
+
+.video-section, .text-section {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Frame-like look for the video */
+.video-section {
+  flex: 2;
+  background-color: #ffffff;
+  border-right: 1px solid #eee;
+}
+
+.video-section iframe {
+  width: 100%;
+  height: 320px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 8px solid white;
+}
+
+/* Text content styling */
+.text-section {
+  flex: 1;
+  background-color: #ffffff;
+}
+
+.text-section h2 {
+  font-size: 24px;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.hausla-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text-section p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.text-section em {
+  font-style: italic;
+  font-weight: 500;
+  display: block;
+  margin-top: 15px;
+  color: #000000; /* Kotak red tone for emphasis */
+}
