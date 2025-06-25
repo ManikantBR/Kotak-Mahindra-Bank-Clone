@@ -6,7 +6,7 @@
 } 
 body
 {
-  color: #f8f9fa;
+  color: #f8f9fa; 
 }
 li {
   list-style: none;
@@ -249,73 +249,355 @@ a {
 
 
 /* 2grid video  */
-
-
-.kotak-container {
-  display: flex;
-  max-width: 1100px;
-  margin: 40px auto;
-  background: #ffffff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-  border: 1px solid #e2e2e2;
+/* Entire Kotak Hausla section is scoped inside .kotak-section */
+.kotak-section {
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.video-section, .text-section {
-  padding: 30px;
+/* Ensure child elements are boxed properly */
+.kotak-section * {
+  box-sizing: border-box;
+}
+
+/* Grid container for video and text */
+.kotak-hausla-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Box container for both sections */
+.kotak-box {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-/* Frame-like look for the video */
-.video-section {
-  flex: 2;
-  background-color: #ffffff;
-  border-right: 1px solid #eee;
-}
-
-.video-section iframe {
+/* Video-specific styles */
+.kotak-video-wrapper iframe {
   width: 100%;
-  height: 320px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  border: 8px solid white;
+  height: 330px;
+  border: none;
+  border-radius: 10px;
 }
 
-/* Text content styling */
-.text-section {
-  flex: 1;
-  background-color: #ffffff;
-}
-
-.text-section h2 {
-  font-size: 24px;
-  color: #1a1a1a;
+/* Heading for the right section */
+.kotak-text-title {
+  font-size: 22px;
+  color: #333;
   margin-bottom: 15px;
 }
 
-.hausla-image {
+/* Hausla image styling */
+.kotak-img {
   width: 100%;
+  height: auto;
   border-radius: 10px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
 }
 
-.text-section p {
+/* Text body paragraph */
+.kotak-text-body {
   font-size: 16px;
   color: #444;
   line-height: 1.6;
 }
 
-.text-section em {
+/* Highlighted quote text */
+.kotak-highlight {
   font-style: italic;
-  font-weight: 500;
-  display: block;
-  margin-top: 15px;
-  color: #000000; /* Kotak red tone for emphasis */
+  font-weight: 600;
+  color: #d32f2f; /* Kotak red */
 }
+
+/* Responsive design: stack vertically on smaller screens */
+@media (max-width: 900px) {
+  .kotak-hausla-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* knowledge hub */
+
+
+
+    .knowledge-hub-section {
+      background-color: #f8f9fa;
+      padding: 50px 20px;
+    }
+
+    .hub-title {
+      text-align: center;
+      font-size: 26px;
+      font-weight: 600;
+      color: #0b2e6e;
+      margin-bottom: 30px;
+    }
+
+    .hub-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Left main content */
+    .hub-feature-card {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: #000;
+    }
+
+    .hub-feature-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .hub-feature-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 30px 25px;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+      color: #fff;
+    }
+
+    .hub-feature-overlay h4 {
+      margin: 0 0 12px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .hub-feature-overlay p {
+      font-size: 20px;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .hub-readmore {
+      color: #fff;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .hub-readmore::after {
+      content: "→";
+      margin-left: 6px;
+      font-size: 18px;
+    }
+
+    /* Right stories list */
+    .hub-sidebar {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .hub-sidebar h4 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .hub-story-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .hub-story-item {
+      display: flex;
+      justify-items: center;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding: 12px 0;
+    }
+
+    .hub-story-item img {
+      width: 60px;
+      height: 40px;
+      border-radius: 5px;
+      object-fit: cover;
+      margin-right: 12px;
+    }
+
+    .hub-story-item a {
+      color: #222;
+      font-size: 14px;
+      text-decoration: none;
+      flex-grow: 1;
+    }
+
+    .hub-story-item::after {
+      content: ">";
+      color: red;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+
+    .hub-viewall {
+      color: red;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      margin-top: 15px;
+    }
+
+    .hub-viewall::after {
+      content: ">";
+      margin-left: 6px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hub-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+
+
+
+   /* Need Help? start  */
+
+   .need-help-section {
+  background-color: #f8f9fa;
+}
+
+.need-help-section .container {
+  padding: 0 20px;
+}
+
+.section-title {
+  color: #002244;
+  font-weight: bold;
+}
+
+.quick-help {
+  gap: 12px;
+}
+
+.quick-card {
+  flex: 1;
+  align-items: center;
+  display: flex;  
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.quick-card img { 
+  height: 40px;
+  width: 40px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.quick-card h5{
+  font-size: 16px;
+}
+.quick-card p{
+  font-size: 12px;
+}
+
+.grid-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  height: 100%; 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.grid-card img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.grid-card h5 {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.grid-card a {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Remove scrolling from inside accordion */
+.accordion-card .accordion {
+  max-height: none;
+  overflow: visible;
+}
+
+/* Set fixed height to entire card so layout doesn't shift */
+.accordion-card.grid-card {
+  min-height: 400px; /* Adjust as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.accordion-button {
+  background: #f1f1f1;
+  font-weight: 600;
+  padding: 8px 12px;
+}
+
+.accordion-body {
+  padding: 10px 12px;
+  background: #ffffff;
+} 
+
+
+
+/* back to top  */
+
+.back-to-top-wrapper {
+  text-align: end;
+  justify-items: center;
+  margin-top: 40px;
+  margin-right: 160px;
+}
+
+.back-to-top-btn {
+  font-size: 16px;
+  background: none;  
+  border: none;
+  color: #525456;
+  cursor: pointer;
+  padding: 8px 16px;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+
+.back-to-top-btn:hover {
+  transform: scale(1.1);
+}
+
+
 
 
 /* footer 1  */
